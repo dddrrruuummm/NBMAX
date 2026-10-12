@@ -1,0 +1,10 @@
+import type {Metadata} from "next";
+import {Header,Footer} from "@/components/chrome";
+import {BriefProvider} from "@/components/brief-provider";
+import {site} from "@/lib/site";
+import "./globals.css";
+export const metadata:Metadata={metadataBase:new URL(site.url),title:{default:"NB MAX LUXURY | Building Materials & Hardware",template:"%s | NB MAX LUXURY"},description:"Building materials, surface selections, hardware, and plumbing supplies. Explore NB MAX LUXURY's material library and discuss your project requirements.",icons:{icon:"/logo.svg",apple:"/logo.svg"},openGraph:{type:"website",locale:"en_US",siteName:site.name,title:"NB MAX LUXURY | Building Materials & Hardware",description:"Considered materials. Practical supply. A building materials and hardware company based in Kuala Lumpur.",images:[{url:"/images/architecture.webp",width:1920,height:2560,alt:"Concrete and glass architecture in natural daylight"}]},twitter:{card:"summary_large_image",title:"NB MAX LUXURY",images:["/images/architecture.webp"]},robots:{index:true,follow:true}};
+export default function Layout({children}:{children:React.ReactNode}){
+ const schema={"@context":"https://schema.org","@type":"LocalBusiness",name:site.name,legalName:site.legalName,url:site.url,email:site.email,logo:`${site.url}/logo.svg`,foundingDate:site.founded,description:"Wholesale, trade, and retail of building materials and hardware, including plumbing and heating supplies.",address:{"@type":"PostalAddress",streetAddress:`${site.address.street}, ${site.address.district}`,addressLocality:site.address.city,addressRegion:site.address.region,postalCode:site.address.postalCode,addressCountry:site.address.countryCode},hasMap:site.maps};
+ return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><BriefProvider><Header/><main id="main">{children}</main><Footer/></BriefProvider><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema).replace(/</g,"\\u003c")}}/></body></html>;
+}
