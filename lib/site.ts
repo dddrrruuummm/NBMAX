@@ -6,7 +6,7 @@ export const site = {
   registeredAddress:"A-1-20 Kompleks Suria Kinrara, 47100 Puchong, Selangor, Malaysia",
   maps:"https://www.google.com/maps/search/?api=1&query=6-1+Jalan+Solaris+2+Solaris+Mont+Kiara+50480+Kuala+Lumpur+Malaysia",
 };
-export const navigation=[{label:"Company",href:"/about"},{label:"Material library",href:"/showcase"},{label:"Supply services",href:"/services"}];
+export const navigation=[{label:"Company",href:"/about"},{label:"Materials",href:"/showcase"},{label:"Services",href:"/services"}];
 export const categories=["All materials","Construction","Surfaces","Hardware","Plumbing"] as const;
 export type Category=typeof categories[number];
 export type Material={id:string;code:string;name:string;category:Category;image:string;alt:string;intro:string;application:string;brief:string[];position?:string};

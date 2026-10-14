@@ -15,7 +15,7 @@ The nbmax.org domain is configured in SEO metadata and sitemap. Connect the doma
 ## Pages and features
 
 - Home, Company, Supply Services, Material Library, Contact, Privacy Policy, and Terms.
-- Seventeen different material category photographs, four warehouse reference photographs, plus architecture and selection photography: twenty-three real photographs in total. The home page features eight material categories in an editorial, mixed-size grid and a dedicated warehouse reference spread.
+- Seventeen different material category photographs, four warehouse reference photographs, plus architecture and selection photography: twenty-three real photographs in total. Home features a monumental brand over warehouse photography, eight staggered material selections, and three additional warehouse scenes without repeating the hero photograph.
 - Category filtering, text search, detail dialogs, and a persistent material brief.
 - Downloadable material lists and a contact form that prepares an email in the visitor's own email app. No message is transmitted until the visitor sends that email.
 - Original SVG logo in navigation, footer, and favicon.
@@ -23,6 +23,8 @@ The nbmax.org domain is configured in SEO metadata and sitemap. Connect the doma
 
 ## Editing
 
-Company details and categories: lib/site.ts. Visual styling: app/globals.css. Logo: public/logo.svg. All final photographs: public/images. Image origins and licenses: docs/photo-sources.json. Source interpretation and design decisions: docs/CONTENT_NOTES.md.
+Company details and categories: lib/site.ts. Visual styling: app/globals.css. Logo: public/logo.svg. All final photographs: public/images. Locally hosted Unbounded and Onest fonts and their SIL Open Font Licenses: public/fonts. Image origins and licenses: docs/photo-sources.json. Confirmed business facts: PRODUCT.md. Design tokens and responsive decisions: DESIGN.md. Verification evidence and limits: docs/REDESIGN_QA.md.
+
+The 2026-10-14 redesign uses Taste Skill for independent art direction and Impeccable's design and quality references. Local .taste-skill and .impeccable files are development records, not runtime dependencies or part of the clean upload copy. No third-party skill engine, hook, remote design service, or telemetry was enabled.
 
 The material brief stores only selected category IDs in browser local storage. No database, cart, login, or payment integration is included.
